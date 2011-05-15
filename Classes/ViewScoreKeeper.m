@@ -56,6 +56,7 @@
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner
 {
     // Do nothings...
+    // again !
 }
 
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
@@ -1087,6 +1088,7 @@
     self.viewMana = nil;
     
     self.adView = nil;
+    self.adMobViewController = nil;
     self.tmpButtonForAd = nil;
 
 
@@ -1137,6 +1139,8 @@
     [viewMana release];
     
     [adView release];
+    if ( adMobViewController )
+        [adMobViewController release];
     [tmpButtonForAd release];
 
     [super dealloc];

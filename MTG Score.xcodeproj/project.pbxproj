@@ -225,6 +225,10 @@
 		81C7FC9D133DE61900DC9AA2 /* style-portrait.css in Resources */ = {isa = PBXBuildFile; fileRef = 81C7FC9B133DE61900DC9AA2 /* style-portrait.css */; };
 		81C7FC9F133DF8DD00DC9AA2 /* style-landscape.css in Resources */ = {isa = PBXBuildFile; fileRef = 81C7FC9E133DF8DD00DC9AA2 /* style-landscape.css */; };
 		81C7FCA1133DFDA700DC9AA2 /* ViewPlayersStatus.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C7FCA3133DFDA700DC9AA2 /* ViewPlayersStatus.xib */; };
+		81CFB851137FD08300C3DE13 /* GoogleAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB850137FD08300C3DE13 /* GoogleAdsViewController.m */; };
+		81CFB852137FD08300C3DE13 /* GoogleAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CFB850137FD08300C3DE13 /* GoogleAdsViewController.m */; };
+		81CFB85B137FD0B700C3DE13 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CFB85A137FD0B700C3DE13 /* libGoogleAdMobAds.a */; };
+		81CFB85C137FD0B700C3DE13 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CFB85A137FD0B700C3DE13 /* libGoogleAdMobAds.a */; };
 		81E6FB7113293BFC008ED60A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 81E6FB7013293BFC008ED60A /* Settings.bundle */; };
 		81EC02081364A9CE007AD46F /* ViewGameLineStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EC02061364A9CE007AD46F /* ViewGameLineStatus.m */; };
 		81EC02091364A9CE007AD46F /* ViewGameLineStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EC02061364A9CE007AD46F /* ViewGameLineStatus.m */; };
@@ -435,6 +439,15 @@
 		81C7FC9B133DE61900DC9AA2 /* style-portrait.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "style-portrait.css"; sourceTree = "<group>"; };
 		81C7FC9E133DF8DD00DC9AA2 /* style-landscape.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "style-landscape.css"; sourceTree = "<group>"; };
 		81C7FCA2133DFDA700DC9AA2 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ViewPlayersStatus.xib; sourceTree = "<group>"; };
+		81CFB84F137FD08300C3DE13 /* GoogleAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAdsViewController.h; sourceTree = "<group>"; };
+		81CFB850137FD08300C3DE13 /* GoogleAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAdsViewController.m; sourceTree = "<group>"; };
+		81CFB854137FD0B700C3DE13 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		81CFB855137FD0B700C3DE13 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		81CFB856137FD0B700C3DE13 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		81CFB857137FD0B700C3DE13 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		81CFB858137FD0B700C3DE13 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		81CFB859137FD0B700C3DE13 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		81CFB85A137FD0B700C3DE13 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		81E6FB7013293BFC008ED60A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		81EC02051364A9CE007AD46F /* ViewGameLineStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGameLineStatus.h; sourceTree = "<group>"; };
 		81EC02061364A9CE007AD46F /* ViewGameLineStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGameLineStatus.m; sourceTree = "<group>"; };
@@ -470,6 +483,7 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				8181E6D6130ED0A800791798 /* SystemConfiguration.framework in Frameworks */,
 				81F8F02D1320EA1C00FC5351 /* QuartzCore.framework in Frameworks */,
+				81CFB85B137FD0B700C3DE13 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +503,7 @@
 				815D46D91343A7CB00F05C5F /* SystemConfiguration.framework in Frameworks */,
 				815D46DD1343A7CB00F05C5F /* QuartzCore.framework in Frameworks */,
 				81726A5D1358BCE7000E25C4 /* libAdMob.a in Frameworks */,
+				81CFB85C137FD0B700C3DE13 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +685,7 @@
 		8112C57E1356163200ADBBB1 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
+				81CFB853137FD09E00C3DE13 /* GoogleAds */,
 				8112C5BE135618C600ADBBB1 /* TouchJSON */,
 				8112C5AE1356177500ADBBB1 /* AdMob */,
 				8112C5A71356172100ADBBB1 /* IBSupport */,
@@ -682,6 +698,8 @@
 			children = (
 				8112C5A81356172100ADBBB1 /* AdViewController.h */,
 				8112C5A91356172100ADBBB1 /* AdViewController.m */,
+				81CFB84F137FD08300C3DE13 /* GoogleAdsViewController.h */,
+				81CFB850137FD08300C3DE13 /* GoogleAdsViewController.m */,
 			);
 			path = IBSupport;
 			sourceTree = "<group>";
@@ -882,6 +900,20 @@
 				81C7FC9E133DF8DD00DC9AA2 /* style-landscape.css */,
 			);
 			name = html;
+			sourceTree = "<group>";
+		};
+		81CFB853137FD09E00C3DE13 /* GoogleAds */ = {
+			isa = PBXGroup;
+			children = (
+				81CFB854137FD0B700C3DE13 /* GADBannerView.h */,
+				81CFB855137FD0B700C3DE13 /* GADBannerViewDelegate.h */,
+				81CFB856137FD0B700C3DE13 /* GADInterstitial.h */,
+				81CFB857137FD0B700C3DE13 /* GADInterstitialDelegate.h */,
+				81CFB858137FD0B700C3DE13 /* GADRequest.h */,
+				81CFB859137FD0B700C3DE13 /* GADRequestError.h */,
+				81CFB85A137FD0B700C3DE13 /* libGoogleAdMobAds.a */,
+			);
+			name = GoogleAds;
 			sourceTree = "<group>";
 		};
 		81EC9076135B435500B2FA61 /* CoreData */ = {
@@ -1139,6 +1171,7 @@
 				8112B16E1360958700AA40E4 /* RotatingDatePicker.m in Sources */,
 				81EC02081364A9CE007AD46F /* ViewGameLineStatus.m in Sources */,
 				8107FEB81365E9F300EE2924 /* ViewGameCurrent.m in Sources */,
+				81CFB851137FD08300C3DE13 /* GoogleAdsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,6 +1245,7 @@
 				8112B16F1360958700AA40E4 /* RotatingDatePicker.m in Sources */,
 				81EC02091364A9CE007AD46F /* ViewGameLineStatus.m in Sources */,
 				8107FEB91365E9F300EE2924 /* ViewGameCurrent.m in Sources */,
+				81CFB852137FD08300C3DE13 /* GoogleAdsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
