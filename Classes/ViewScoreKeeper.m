@@ -55,7 +55,7 @@
 
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner
 {
-    
+    // Do nothings...
 }
 
 -(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
