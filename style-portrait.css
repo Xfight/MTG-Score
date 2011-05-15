@@ -1,0 +1,55 @@
+body
+{
+    width: 302px;
+    font-family: "Helvetica";
+    font-size: 16px;
+}
+
+.nome1
+{
+    width: 151px;
+}
+
+.nome2
+{
+    width: 151px;
+}
+
+table
+{
+    border: 1px solid black;
+}
+
+table tr td
+{
+    text-align: center;
+    padding: 3px;
+}
+
+.vita
+{
+    border: 1px solid black;
+    border-left: none;
+    padding: 0 8px;
+}
+
+.infect
+{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.br
+{
+    border-right: 1px solid black;
+}
+
+.even
+{
+    background-color: #D5FFF6;
+}
+
+.end
+{
+    border-top: 1px solid black;
+}

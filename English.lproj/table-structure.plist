@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+		<key>CellType</key>
+		<string>SwitchDataEntryCell</string>
+		<key>DataKey</key>
+		<string>enableHistory</string>
+		<key>Label</key>
+		<string>Enable History</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>SwitchDataEntryCell</string>
+		<key>DataKey</key>
+		<string>enableTimer</string>
+		<key>Label</key>
+		<string>Enable Timer</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>SwitchDataEntryCell</string>
+		<key>DataKey</key>
+		<string>reverseCountTime</string>
+		<key>Label</key>
+		<string>Countdown</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>TimeDataEntryCell</string>
+		<key>DataKey</key>
+		<string>reverseHour</string>
+		<key>Label</key>
+		<string>Duration</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>SwitchDataEntryCell</string>
+		<key>DataKey</key>
+		<string>alarmOnTenMinutes</string>
+		<key>Label</key>
+		<string>Alarm on 10 minutes</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>SwitchDataEntryCell</string>
+		<key>DataKey</key>
+		<string>alarmOnEndTime</string>
+		<key>Label</key>
+		<string>Alarm on end</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>SwitchDataEntryCell</string>
+		<key>DataKey</key>
+		<string>displaySleep</string>
+		<key>Label</key>
+		<string>Remove display sleep</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>ColorDataEntryCell</string>
+		<key>DataKey</key>
+		<string>backgroundColor</string>
+		<key>Label</key>
+		<string>Background Color</string>
+	</dict>
+	<dict>
+		<key>CellType</key>
+		<string>ColorDataEntryCell</string>
+		<key>DataKey</key>
+		<string>textTimerColor</string>
+		<key>Label</key>
+		<string>Timer Color</string>
+	</dict>
+</array>
+</plist>

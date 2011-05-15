@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesStackState
+   version = "1.0">
+   <StackStates>
+      <StackState
+         stackFrameDescription = "GLOBAL">
+         <expressions>
+            <expression
+               value = "self.view.frame.size">
+            </expression>
+         </expressions>
+      </StackState>
+      <StackState
+         stackFrameDescription = "-[ViewScoreKeeper viewRotation:]:ViewScoreKeeper.m">
+         <expressions>
+         </expressions>
+      </StackState>
+   </StackStates>
+</VariablesStackState>
