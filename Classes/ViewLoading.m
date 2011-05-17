@@ -14,7 +14,7 @@
 
 @implementation ViewLoading
 
-@synthesize labelContainer, activity, labelText;
+@synthesize labelContainer, activity, labelText, delegate, canCancel;
 
 - (id)initWithFrame:(CGRect)frame andCenterPoint:(CGPoint)center
 {    
@@ -58,6 +58,7 @@
 		[self.labelContainer addSubview:labelText];
         
         self.hidden = YES;
+        self.canCancel = NO;
     }
     
     return self;
@@ -118,6 +119,7 @@
         
 		
 		[self.labelContainer addSubview:labelText];
+        self.canCancel = NO;
 		
     }
     return self;
@@ -167,15 +169,57 @@
  }
  */
 
+- (void)cancelLoading
+{
+    [self.delegate viewLoadingDidCancelLoading:self];
+}
+
+- (void)editForCancelLoading
+{
+    CGRect rect;
+    rect = self.labelContainer.frame;
+    rect.origin.y -= 20;
+    rect.size.height += 20;
+    self.labelContainer.frame = rect;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelLoading)];
+    [self.labelContainer addGestureRecognizer:tap];
+    
+    rect = self.activity.frame;
+    rect.origin.y -= 10;
+    self.activity.frame = rect;
+    
+    
+    rect = self.labelText.frame;
+    rect.origin.y += 1;
+    rect.size.height += 20;
+    self.labelText.frame = rect;
+    
+    self.labelText.lineBreakMode = UILineBreakModeWordWrap;
+    self.labelText.numberOfLines = 0;
+    
+    NSString *s = [NSString stringWithFormat:@"%@\n(%@)", self.labelText.text, NSLocalizedString(@"Cancel", @"Cancel")];
+    self.labelText.text = s;
+}
+
 
 - (void)startLoading {
     self.hidden = NO;
 	[activity startAnimating];
+    
+    if ( timer == nil && self.canCancel )
+        timer = [[NSTimer scheduledTimerWithTimeInterval:kTimerWaitBeforeCancel target:self selector:@selector(editForCancelLoading) userInfo:nil repeats:NO] retain];
 }
 
 - (void)stopLoading {
     self.hidden = YES;
 	[activity stopAnimating];
+    
+    if ( timer != nil )
+    {
+        [timer invalidate];
+        [timer release];
+        timer = nil;
+    }
 }
 
 - (void)dealloc {
@@ -186,6 +230,9 @@
 	[labelContainer release];
 	[activity release];
 	[labelText release];
+    
+    if ( timer )
+        [timer release];
 	
 	[super dealloc];
 }

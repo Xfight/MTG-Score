@@ -12,13 +12,19 @@
 @implementation ViewFaqDetailsDoc
 @synthesize pul, web, viewLoading, webViewSearch;
 
+
+
 - (ViewLoading *)viewLoading
 {
     /*if ( ! viewLoading )
         viewLoading = [[ViewLoading createCenterLoading] retain];
      */
     if ( ! viewLoading )
+    {
         viewLoading = [[ViewLoading alloc] initWithFrame:self.view.frame andCenterPoint:self.view.center];
+        viewLoading.delegate = self;
+        viewLoading.canCancel = YES;
+    }
     
     return viewLoading;
 }
@@ -46,6 +52,19 @@
     //[actionSheet showInView:self.navigationController];
     //[actionSheet showFromTabBar:self.tabBarController.tabBar];
     [actionSheet release];
+}
+
+- (void)viewLoadingDidCancelLoading:(ViewLoading *)viewLoading
+{
+    if ( [web isLoading] ) {
+        [web stopLoading];
+        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    }
+    
+    [self.viewLoading stopLoading];
+    [self.viewLoading removeFromSuperview];
+    
+    redirect = NO;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView

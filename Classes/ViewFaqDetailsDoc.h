@@ -11,7 +11,7 @@
 #import "ViewLoading.h"
 #import "WebViewSearch.h"
 
-@interface ViewFaqDetailsDoc : UIViewController<UIWebViewDelegate, UIActionSheetDelegate> {
+@interface ViewFaqDetailsDoc : UIViewController<UIWebViewDelegate, UIActionSheetDelegate, ViewLoadingDelegate> {
     PairUrlLanguage *pul;
     IBOutlet UIWebView *web;
     ViewLoading *viewLoading;

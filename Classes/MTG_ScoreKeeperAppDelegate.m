@@ -114,7 +114,7 @@
 	[item release];
     self.viewScoreKeeper.viewMana = viewMana;
     
-    viewAllSearch = [[ViewAllSearch alloc] init];
+    viewAllSearch = [[ViewAllSearch alloc] initWithStyle:UITableViewStyleGrouped];
     item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:2];
 	viewAllSearch.tabBarItem = item;
 	[item release];
