@@ -144,10 +144,10 @@
 	viewSettings.vsk = viewScoreKeeper;
 	[item release];
     
-    ViewProvaCoreData *vpcd = [[ViewProvaCoreData alloc] init];
+    //ViewProvaCoreData *vpcd = [[ViewProvaCoreData alloc] init];
 	
-	tabBarController.viewControllers = [NSArray arrayWithObjects:self.viewScoreKeeper, viewMana, /*viewPlayersStatus,*/ nav2, nav, viewSettings, vpcd, nil];
-    [vpcd release];
+	tabBarController.viewControllers = [NSArray arrayWithObjects:self.viewScoreKeeper, viewMana, /*viewPlayersStatus,*/ nav2, nav, viewSettings, /*vpcd, */nil];
+    //[vpcd release];
     [nav release];
     //[viewPlayersStatus release];
     [nav2 release];
