@@ -891,6 +891,8 @@
     [self.storyPlayer1 addObject:[PlayerStatus playerStatusLife:scorePlayer1Int andInfect:poisonPlayer1Int]];
     [self.storyPlayer2 addObject:[PlayerStatus playerStatusLife:scorePlayer2Int andInfect:poisonPlayer2Int]];
     
+#if defined (LITE_VERSION)
+    
     // inizializza banner
     failedBannerView = 0;
     adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 411, 0, 0)];
@@ -903,6 +905,7 @@
     [self.view addSubview:adView];
     self.adView.delegate = self;
     self.bannerIsVisible = NO;
+#endif
     
     // sistema la grafica
     //[self initializeStartMatch];
@@ -969,17 +972,22 @@
 		
 	} else {
         
+#if defined (LITE_VERSION)
         labelNamedTimer.frame =   CGRectMake(102, 160, 44, 21);
 		labelTimer.frame =        CGRectMake(151, 160, 67, 21);
 		buttonDiceRoll.frame  =   CGRectMake(123, 228, 72, 30);
 		buttonGameWin.frame =   CGRectMake(106, 269, 107, 37);
-        
-        /*if ( [[buttonStartEndMatch titleForState:UIControlStateNormal] isEqualToString:kTitleStartMatch] )
-            buttonStartEndMatch.frame =  CGRectMake(106, 284, 107, 37);
-        else*/
-            buttonStartEndMatch.frame =  CGRectMake(106, 314, 107, 37);
-        
+        buttonStartEndMatch.frame =  CGRectMake(106, 314, 107, 37);
         buttonStopResumeTimer.frame  =  CGRectMake(123, 188, 72, 30);
+        
+#elif defined (FULL_VERSION)
+        labelNamedTimer.frame  = CGRectMake(137, 161,  44, 21);
+		labelTimer.frame       = CGRectMake(126, 185,  67, 21);
+        buttonStopResumeTimer.frame  =  CGRectMake(123, 220, 72, 30);
+		buttonDiceRoll.frame   = CGRectMake(123, 262,  72, 36);
+		buttonGameWin.frame  = CGRectMake(106, 315, 107, 37);
+		buttonStartEndMatch.frame = CGRectMake(106, 360, 107, 37);
+#endif
         
 
         namePlayer1.frame  = CGRectMake(7, 5, 97, 31);
@@ -1087,9 +1095,11 @@
     
     self.viewMana = nil;
     
+#if defined (LITE_VERSION)
     self.adView = nil;
     self.adMobViewController = nil;
     self.tmpButtonForAd = nil;
+#endif
 
 
     [super viewDidUnload];
@@ -1138,10 +1148,12 @@
     
     [viewMana release];
     
+#if defined (LITE_VERSION)
     [adView release];
     if ( adMobViewController )
         [adMobViewController release];
     [tmpButtonForAd release];
+#endif
 
     [super dealloc];
 }
